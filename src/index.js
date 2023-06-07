@@ -1,17 +1,40 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+// import ReactDOM from "react-dom"; // 17
+import ReactDOM from "react-dom/client"; // 18
+import { BrowserRouter } from "react-router-dom";
+import styled from "styled-components";
+import { Provider } from "react-redux";
+import App from "./App";
+import "./index.css";
+import { createGlobalStyle, ThemeProvider } from "styled-components";
+import store from "./redux/Store";
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
+// const GlobalStyle = createGlobalStyle`
+//   body {
+//     color: ${(props) => (props.whiteColor ? "white" : "black")};
+//     font-family: ${(props) => props.theme.fontFamily};
+//   }
+// `;
+//{/* <GlobalStyle whiteColor /> */}
+
+// 18
+ReactDOM.createRoot(document.getElementById("root")).render(
+  <BrowserRouter>
+    <ThemeProvider theme={{ fontFamily: "Poppins" }}>
+      <Provider store={store}>
+        <App />
+      </Provider>
+    </ThemeProvider>
+  </BrowserRouter>
 );
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+// 17
+// ReactDOM.render(
+//   <BrowserRouter>
+//     <ThemeProvider theme={{ fontFamily: "Poppins" }}>
+//       <Provider store={store}>
+//         <App />
+//       </Provider>
+//     </ThemeProvider>
+//   </BrowserRouter>,
+//   document.getElementById("root")
+// );
