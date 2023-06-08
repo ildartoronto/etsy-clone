@@ -7,13 +7,13 @@ import DetailsTitle from "./DetailsTitle";
 import DetailsDescription from "./DetailsDescription";
 import DetailsImages from "./DetailsImages";
 
-const ProductDetails = () => {
+const ProductDetails = ({ onClick }) => {
   const product = useSelector((state) => state.productDetails);
 
   return (
     <BodyStyle>
       <DetailsTitle title={product?.item?.title}></DetailsTitle>
-      <DetailsButtons itemImages={product?.listingsData} item={product?.item} />
+      <DetailsButtons itemImages={product?.listingsData} item={product?.item} onClick={onClick}/>
       <DetailsImages itemImages={product?.listingsData} />
       <DetailsDescription description={product?.item?.description} />
     </BodyStyle>

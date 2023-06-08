@@ -14,7 +14,7 @@ import CheckoutPage from "./blocks/checkout/CheckoutPage";
 import CopyrightComponent from "./components/styledComponents/CopyrightComponent";
 // this is for the modal window that pops up when the user clicks on the product icon
 // this is needed to prevent rerendering of Modal component
-import ModalWrapper from "./components/styledComponents/ModalWrapper";
+import ModalWrapper from "./components/styledComponents/modal/ModalWrapper";
 import { SIZES } from "./components/global/constants";
 // import env from "react-dotenv";
 

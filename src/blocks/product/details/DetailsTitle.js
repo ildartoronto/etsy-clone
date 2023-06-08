@@ -1,12 +1,10 @@
-import React from 'react'
-import styled from 'styled-components'
-import { COLORS } from '../../../components/global/constants'
+import React from "react";
+import styled from "styled-components";
+import { COLORS } from "../../../components/global/constants";
 
-const DetailsTitle = ({titleTest}) => {
-	return (
-		<BodyStyle>titleTest</BodyStyle>
-	)
-}
+const DetailsTitle = ({ title }) => {
+  return <BodyStyle>{title}</BodyStyle>;
+};
 const BodyStyle = styled.div`
   display: flex;
   flex-wrap: wrap;
@@ -19,4 +17,4 @@ const BodyStyle = styled.div`
   background-color: ${COLORS.mainColor};
   color: ${COLORS.secondColor};
 `;
-export default DetailsTitle
+export default DetailsTitle;

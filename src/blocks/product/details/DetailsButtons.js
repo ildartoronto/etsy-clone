@@ -5,11 +5,10 @@ import { COLORS, SIZES } from "../../../components/global/constants";
 import CartComponent from "../../../components/styledComponents/CartComponent";
 import RingSizesComponent from "../../../components/styledComponents/RingSizesComponent";
 import { addItemToCart } from "../../../redux/slices/CartSlice";
-import { closeModalWindow } from "../../../redux/slices/ModalWindowSlice";
 import RingPriceComp from "../../../components/styledComponents/RingPriceComp";
 import { NavLink } from "react-router-dom";
 
-const DetailsButtons = ({ itemImages, item }) => {
+const DetailsButtons = ({ itemImages, item, onClick }) => {
   const dispatch = useDispatch();
 
   const { title, price } = item;
@@ -23,7 +22,7 @@ const DetailsButtons = ({ itemImages, item }) => {
   };
 
   const onCloseModalHandler = () => {
-    dispatch(closeModalWindow());
+    onClick();
   };
 
   const onChangeHandle = (ringSize) => {

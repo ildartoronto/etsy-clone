@@ -1,4 +1,3 @@
-// import React from "react";
 import { useDispatch } from "react-redux";
 import styled from "styled-components";
 import Filter from "./Filter";
@@ -8,9 +7,7 @@ import { resetFilters } from "../../../redux/slices/FilterItemsSlice";
 
 const FilterManager = () => {
   const dispatch = useDispatch();
-
-  console.log("FilterManager");
-
+  // console.log("FilterManager");
   const onResetFiltersHandler = () => {
     dispatch(resetFilters());
   };
