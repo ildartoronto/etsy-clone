@@ -3,7 +3,7 @@ import React, { useRef } from "react";
 import { useDispatch } from "react-redux";
 import styled from "styled-components";
 import PriceComponent from "../../../components/styledComponents/PriceComponent";
-import { useGetItemQuery } from "../../../redux/Store";
+import { useGetItemQuery } from "../../../redux/slices/ItemSlice";
 import { COLORS } from "../../../components/global/constants";
 import { openModalWindow } from "../../../redux/slices/ModalWindowSlice";
 import { setProduct } from "../../../redux/slices/ProductDetailsSlice";
@@ -17,7 +17,7 @@ const Product = ({ item }) => {
   const { listing_id, price, title } = item;
   // get an array of listing data for this item by passing in the listing_id to the useGetItemQuery hook in ItemSlice.js and then use the listing_id to filter the data array
   const { data, isSuccess } = useGetItemQuery(listing_id);
-  // !!! - data.results; // for use with remote etsy server
+  console.log("listing_id =", listing_id);
 
   const onCardClickHandler = (event) => {
     if (data && isSuccess) {
