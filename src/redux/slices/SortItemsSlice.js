@@ -15,4 +15,4 @@ const sortItemsSlice = createSlice({
 });
 
 export const { setSorting } = sortItemsSlice.actions;
-export default sortItemsSlice.reducer;
+export default sortItemsSlice;

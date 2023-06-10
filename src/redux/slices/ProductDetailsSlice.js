@@ -18,4 +18,4 @@ const productDetailsSlice = createSlice({
 
 export const { setProduct } = productDetailsSlice.actions;
 
-export default productDetailsSlice.reducer;
+export default productDetailsSlice;

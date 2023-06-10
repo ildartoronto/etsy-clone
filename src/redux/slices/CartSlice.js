@@ -6,7 +6,7 @@ const initialState = {
 };
 
 const cartSlice = createSlice({
-  name: "cartSlice",
+  name: "cart",
   initialState,
   reducers: {
     addItemToCart: (state, action) => {
@@ -54,7 +54,7 @@ export const {
   removeItemFromCart,
   clearCart,
 } = cartSlice.actions;
-export default cartSlice.reducer;
+export default cartSlice;
 
 // how to add item to cart in a component and group items by listing_id:
 // const onAddItemToCart = (itemToAdd) => {

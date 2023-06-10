@@ -37,4 +37,4 @@ const modalWindowSlice = createSlice({
 });
 
 export const { openModalWindow, closeModalWindow } = modalWindowSlice.actions;
-export default modalWindowSlice.reducer;
+export default modalWindowSlice;

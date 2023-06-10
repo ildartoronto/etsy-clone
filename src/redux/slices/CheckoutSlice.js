@@ -37,7 +37,7 @@ const checkoutSlice = createSlice({
 });
 
 export const { saveValue, setLabels } = checkoutSlice.actions;
-export default checkoutSlice.reducer;
+export default checkoutSlice;
 
 // Selector function to check if all data is not empty
 const isDataValidSelector = createSelector(

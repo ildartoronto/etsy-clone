@@ -2,7 +2,6 @@ import { configureStore } from "@reduxjs/toolkit";
 // import { setupListeners } from "@reduxjs/toolkit/query/react";
 import { setupListeners } from "@reduxjs/toolkit/query";
 import { apiSlice } from "./slices/ApiSlice";
-import { itemSlice } from "./slices/ItemSlice";
 import CurrencySlice from "./slices/CurrencySlice";
 import CartSlice from "./slices/CartSlice";
 import ModalWindowSlice from "./slices/ModalWindowSlice";
@@ -14,29 +13,19 @@ import CheckoutSlice from "./slices/CheckoutSlice";
 const store = configureStore({
   reducer: {
     [apiSlice.reducerPath]: apiSlice.reducer,
-    [itemSlice.reducerPath]: itemSlice.reducer,
-    currency: CurrencySlice,
-    cart: CartSlice,
-    modalWindow: ModalWindowSlice,
-    productDetails: ProductDetailsSlice,
-    sortItems: SortItemsSlice,
-    filterItems: FilterItemsSlice,
-    checkout: CheckoutSlice,
+    [CurrencySlice.name]: CurrencySlice.reducer,
+    [CartSlice.name]: CartSlice.reducer,
+    [ModalWindowSlice.name]: ModalWindowSlice.reducer,
+    [ProductDetailsSlice.name]: ProductDetailsSlice.reducer,
+    [SortItemsSlice.name]: SortItemsSlice.reducer,
+    [FilterItemsSlice.name]: FilterItemsSlice.reducer,
+    [CheckoutSlice.name]: CheckoutSlice.reducer,
   },
   middleware: (getDefaultMiddleware) =>
-    getDefaultMiddleware()
-      .concat(apiSlice.middleware)
-      .concat(itemSlice.middleware),
+    getDefaultMiddleware().concat(apiSlice.middleware),
 });
 
 setupListeners(store.dispatch);
 
-export { useGetItemsQuery } from "./slices/ApiSlice";
-export { useGetItemQuery } from "./slices/ItemSlice";
-
+export { useGetItemQuery, useGetItemsQuery } from "./slices/ApiSlice";
 export default store;
-
-// middleware: (getDefaultMiddleware) =>
-// getDefaultMiddleware({
-//   serializableCheck: false,
-// })

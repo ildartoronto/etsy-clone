@@ -26,7 +26,7 @@ const CheckoutPage = () => {
             <ItemsDetails />
           </SectionStyle>
           <TotalPriceComp items={cartItems} />
-          <PaypalComponent />
+          {/* <PaypalComponent /> */}
         </>
       )}
     </BodyStyle>
