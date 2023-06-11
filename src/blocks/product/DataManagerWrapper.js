@@ -49,9 +49,26 @@ const DataManagerWrapper = ({ onDataLoaded }) => {
     }
   }, [isSuccess, data, filterItems, sortItems]);
 
+  //---------  code to show products one by one ---------
+  const [index, setIndex] = useState(0);
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      if (index < filteredData?.length) {
+        setIndex((prevIndex) => prevIndex + 1);
+      }
+    }, 10);
+
+    return () => clearTimeout(timer);
+  }, [index, filteredData?.length]);
+  //------------------------------------------------------
+
   return (
     <>
-      {isSuccess && filteredData?.map((x, i) => <Product key={i} item={x} />)}
+      {/* load products one by one to avoid 429 error on server side */}
+      {isSuccess &&
+        filteredData
+          ?.slice(0, index)
+          .map((x, i) => <Product key={i} item={x} />)}
     </>
   );
 };

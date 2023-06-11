@@ -29,6 +29,7 @@ const NavMenuStyle = styled.ul`
   margin: 0;
   padding: 5px 15px;
   width: 100%;
+  z-index: 100;
   &:hover {
     color: ${COLORS.buttonText};
     transition: all 0.3s ease-in-out;

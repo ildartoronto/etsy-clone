@@ -17,8 +17,8 @@ const Product = ({ item }) => {
   const { listing_id, price, title } = item;
   // get an array of listing data for this item by passing in the listing_id to the useGetItemQuery hook in ApiSlice.js and then use the listing_id to filter the data array
   const { data, isSuccess } = useGetItemQuery(listing_id);
-  if (isSuccess) 
-    console.log("data =", data);
+  // if (isSuccess) 
+  //   console.log("Product =", data);
 
   const onCardClickHandler = (event) => {
     if (data && isSuccess) {
