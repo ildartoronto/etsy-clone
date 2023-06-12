@@ -18,7 +18,9 @@ const CartItem = ({ item, imageUrl, onChangeItem, onRemoveItem }) => {
 
   return (
     <BodyStyle>
-      <CartImage imageUrl={imageUrl} />
+      {/* <WrapperImage> */}
+        <CartImage imageUrl={imageUrl} size={SIZES.itemCardImageWidth} />
+      {/* </WrapperImage> */}
       <DescriptionStyle>{title}</DescriptionStyle>
       <DivVertical>
         <Wrapper>
@@ -73,4 +75,8 @@ const Wrapper = styled.div`
   margin: 0 0 10px;
   padding: 5px 15px;
 `;
+const WrapperImage = styled.div`
+  align-items: top;
+`;
+
 export default CartItem;

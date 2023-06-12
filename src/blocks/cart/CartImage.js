@@ -1,9 +1,9 @@
 import styled from "styled-components";
-import { COLORS, SIZES } from "../../components/global/constants";
+import { COLORS } from "../../components/global/constants";
 
-const CartImage = ({ imageUrl }) => {
+const CartImage = ({ imageUrl, size }) => {
   // console.log("CartImage", imageUrl);
-  return <BodyStyle src={imageUrl} />;
+  return <BodyStyle src={imageUrl} size={size} />;
 };
 
 const BodyStyle = styled.img.attrs((props) => ({
@@ -11,8 +11,8 @@ const BodyStyle = styled.img.attrs((props) => ({
 }))`
   flex: 0;
   background-color: ${COLORS.lightBg};
-  width: ${SIZES.itemCardImageWidth};
-  height: ${SIZES.itemCardImageHeight};
+  width: ${(props) => props.size};
+  height: ${(props) => props.size};
   margin-left: 0;
 `;
 export default CartImage;

@@ -56,7 +56,7 @@ const DataManagerWrapper = ({ onDataLoaded }) => {
       if (index < filteredData?.length) {
         setIndex((prevIndex) => prevIndex + 1);
       }
-    }, 10);
+    }, 100);
 
     return () => clearTimeout(timer);
   }, [index, filteredData?.length]);

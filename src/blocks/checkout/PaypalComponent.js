@@ -3,23 +3,7 @@ import { useSelector } from "react-redux";
 import { PayPalButtons } from "@paypal/react-paypal-js";
 import { getPrice } from "../../components/global/utils";
 import { selectIsDataValid } from "../../redux/slices/CheckoutSlice";
-//  "@paypal/react-paypal-js": "^7.8.3",
-//    "browserify-zlib": "^0.2.0",
-//"react-bootstrap": "^2.0.3",
-//    "react-scripts": "^5.0.1",
-//  "devDependencies": {
-  //"http-proxy-middleware": "^2.0.6"
-//}
-//  "redux-toolkit": "^1.1.2",
-// "@testing-library/jest-dom": "^5.14.1",
-// "@testing-library/react": "^11.2.7",
-// "@testing-library/user-event": "^12.8.3",
-// "eslintConfig": {
-//   "extends": [
-//     "react-app",
-//     "react-app/jest"
-//   ]
-// },
+
 export const PaypalComponent = () => {
   const cartItems = useSelector((state) => state.cart.cartItems);
   const checkout = useSelector((state) => state.checkout);

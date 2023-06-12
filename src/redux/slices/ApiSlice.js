@@ -27,7 +27,7 @@ const addTags = (data) => {
   });
 };
 
-let delayCounts = 10; // 10ms delay between each request
+let delayCounts = 100; // 100ms delay between each request
 
 const apiSlice = createApi({
   reducerPath: "apiSlice",

@@ -30,5 +30,7 @@ export const SIZES = {
   itemCardHeight: "425px",
   itemCardImageWidth: "278px",
   itemCardImageHeight: "278px",
+  itemCheckoutImageWidth: "120px",
+  itemCheckoutImageHeight: "120px",
   minHeight: "100vh",
 };

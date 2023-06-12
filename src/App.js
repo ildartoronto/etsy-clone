@@ -1,10 +1,8 @@
 import { Routes, Route, Navigate } from "react-router-dom";
-// import "bootstrap/dist/css/bootstrap.min.css";
 import styled from "styled-components";
 import { Provider } from "react-redux";
 import store from "./redux/Store";
 import { PayPalScriptProvider } from "@paypal/react-paypal-js";
-// import { ApiProvider } from "@reduxjs/toolkit/query/react";
 // import { fetchExchangeRate } from "./redux/slices/CurrencySlice";
 import Navbar from "./blocks/navbar/Navbar";
 import HomePage from "./blocks/home/HomePage";
