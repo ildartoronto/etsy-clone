@@ -1,7 +1,7 @@
 import { useSelector } from "react-redux";
 import styled from "styled-components";
 import { COLORS } from "../../components/global/constants";
-import { PaypalComponent } from "./PaypalComponent";
+import PaypalComponent from "./PaypalComponent";
 import TotalPriceComp from "../../components/styledComponents/TotalPriceComponent";
 import ShippingDetails from "./ShippingDetails";
 import CheckoutTitle from "../cart/CartTitle";

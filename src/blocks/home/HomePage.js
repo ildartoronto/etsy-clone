@@ -2,7 +2,7 @@
 import styled from "styled-components";
 import WelcomeImage from "../../components/assets/welcome-image.jpg";
 import Texts from "../../redux/data/Texts.json";
-import { COLORS, SIZES } from "./../../components/global/constants";
+import { COLORS } from "./../../components/global/constants";
 
 const HomePage = () => {
   return (
