@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/etsy-clone/static/css/main.2d2f1629.css",
+    "main.js": "/etsy-clone/static/js/main.e782b07e.js",
+    "static/media/welcome-image.jpg": "/etsy-clone/static/media/welcome-image.09a3bdb00b3f98611fab.jpg",
+    "index.html": "/etsy-clone/index.html",
+    "main.2d2f1629.css.map": "/etsy-clone/static/css/main.2d2f1629.css.map",
+    "main.e782b07e.js.map": "/etsy-clone/static/js/main.e782b07e.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.2d2f1629.css",
+    "static/js/main.e782b07e.js"
+  ]
+}
