@@ -3,7 +3,7 @@ import React, { useRef } from "react";
 import { useDispatch } from "react-redux";
 import styled from "styled-components";
 import PriceComponent from "../../../components/styledComponents/PriceComponent";
-import { useGetItemQuery } from "../../../redux/slices/ApiSlice";
+import { useGetItemQuery } from "../../../redux/slices/ItemApiSlice";
 import { COLORS } from "../../../components/global/constants";
 import { openModalWindow } from "../../../redux/slices/ModalWindowSlice";
 import { setProduct } from "../../../redux/slices/ProductDetailsSlice";
@@ -15,7 +15,7 @@ const Product = ({ item }) => {
   const dispatch = useDispatch();
   const ref = useRef(null);
   const { listing_id, price, title } = item;
-  // get an array of listing data for this item by passing in the listing_id to the useGetItemQuery hook in ApiSlice.js and then use the listing_id to filter the data array
+  // get an array of listing data for this item by passing in the listing_id to the useGetItemQuery hook in ItemApiSlice.js and then use the listing_id to filter the data array
   const { data, isSuccess } = useGetItemQuery(listing_id);
   // if (isSuccess) 
   //   console.log("Product =", data);

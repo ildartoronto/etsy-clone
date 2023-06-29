@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
-import { useGetItemsQuery } from "../../redux/slices/ApiSlice";
+import { useGetItemsQuery } from "../../redux/slices/ItemsApiSlice";
 import Product from "../product/productCard/Product";
 
 const DataManagerWrapper = ({ onDataLoaded }) => {

@@ -9,7 +9,7 @@ import ProductsPage from "./blocks/product/ProductsPage";
 import CartPage from "./blocks/cart/CartPage";
 import CheckoutPage from "./blocks/checkout/CheckoutPage";
 import CopyrightComponent from "./components/styledComponents/CopyrightComponent";
-import TransactionCompletedComp from "./blocks/checkout/TransactionCompletedComp";
+import CheckoutResult from "./blocks/checkout/CheckoutResult";
 // this is for the modal window that pops up when the user clicks on the product icon
 // this is needed to prevent rerendering of Modal component
 import ModalWrapper from "./components/styledComponents/modal/ModalWrapper";
@@ -35,10 +35,8 @@ const App = () => {
             <Route path="/products" element={<ProductsPage />} />
             <Route path="/cart" element={<CartPage />} />
             <Route path="/checkout" element={<CheckoutPage />} />
-            <Route
-              path="/checkoutCompleted"
-              element={<TransactionCompletedComp />}
-            />
+            <Route path="/checkoutResult" element={<CheckoutResult />} />
+            <Route path="*" element={<Navigate to="/home" />} />
           </Routes>
         </BodyStyle>
         <CopyrightComponent />

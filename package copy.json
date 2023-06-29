@@ -1,5 +1,6 @@
 {
-  "name": "tim-win-studio",
+  "homepage": "https://ildartoronto.github.io/etsy-clone",
+  "name": "etsy-clone",
   "version": "0.1.0",
   "private": true,
   "dependencies": {

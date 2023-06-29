@@ -3,17 +3,11 @@ import { useLocation } from "react-router-dom";
 import styled from "styled-components";
 import { COLORS } from "../../components/global/constants";
 
-const TransactionCompletedComp = () => {
+const CheckoutResult = () => {
   const { state } = useLocation();
-  const firstNameValue = state?.details?.firstNameValue;
-  const lastNameValue = state?.details?.lastNameValue;
+  const message = state?.message || "Sorry, something went wrong...";
 
-  return (
-    <BodyStyle>
-      {`Congratulations, ${firstNameValue} ${lastNameValue}! 
-			  You have successfully completed your purchase!`}
-    </BodyStyle>
-  );
+  return <BodyStyle>{message}</BodyStyle>;
 };
 
 const BodyStyle = styled.div`
@@ -25,4 +19,4 @@ const BodyStyle = styled.div`
   font-weight: bold;
 `;
 
-export default TransactionCompletedComp;
+export default CheckoutResult;
